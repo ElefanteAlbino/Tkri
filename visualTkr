@@ -1,0 +1,28 @@
+import numpy as np 
+
+#Crear un tablero vacio
+def create_board():
+    return(np.array([[1, 0, 0],
+                     [0, 2, 0],
+                     [0, 1, 1]]))
+    
+def matrix2Terminal2(tkr): #funcion que recibe una matriz numpy y la imprime en la terminal 
+    
+    m = []
+    
+    for r in range(len(tkr[:, 0])):
+        for c in range(len(tkr[0, :])):
+            
+            if tkr[r][c] == 0:
+                m.append("   ")
+            if tkr[r][c] == 1:
+                m.append(" X ")
+            if tkr[r][c] == 2:
+                m.append(" O ")
+    
+    
+    print("|" + m[0] + "|" + m[1] + "|" + m[2] + "|")
+    print("|" + m[3] + "|" + m[4] + "|" + m[5] + "|")
+    print("|" + m[6] + "|" + m[7] + "|" + m[8] + "|")
+                
+matrix2Terminal2(create_board())
