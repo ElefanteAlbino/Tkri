@@ -1,0 +1,86 @@
+def VictoriaHorizontalO():
+    inicial = True
+    for r in range(3):
+        for c in range(3):
+            if inicial:
+                f1 = P(r,c,1,1)
+                inicial = False
+            else:
+                f1 += P(r,c,1,1) 
+    f2 = f1 + P(r,c,1,1) + 'Y' + 'O'
+    return f2
+
+def VictoriaHorizontalX():
+    inicial = True
+    for r in range(3):
+        for c in range(3):
+            if inicial:
+                f1 = P(r,c,2,1)
+                inicial = False
+            else:
+                f1 += P(r,c,2,1)
+    f2 = f1 + P(r,c,1,1) + 'Y' + 'O'
+    return f2
+
+def VictoriaVerticalO():
+    inicial = True
+    for c in range(3):
+        for r in range(3):
+            if inicial:
+                f1 = P(r,c,1,1)
+                inicial = False
+            else:
+                f1 += P(r,c,1,1) 
+    f2 = f1 + P(r,c,1,1) + 'Y' + 'O' 
+    return f2
+
+def VictoriaVerticalX():
+    inicial = True
+    for c in range(3):
+        for r in range(3):
+            if inicial:
+                f1 = P(r,c,2,1)
+                inicial = False
+            else:
+                f1 += P(r,c,2,1) 
+    f2 = f1  + P(r,c,2,1) +')'+ 'Y' + 'O'
+    return f2
+    
+              
+def VictoriaDiganalO():
+    inicial = True
+    for r in range(3):
+        for c in range(3):
+            if r == c:
+                if inicial:
+                    f1 = P(r,c,1,t)
+                    inicial = False
+                else:
+                    f1 += P(r,c,1,t)
+    f2 = f1 + P(r,c,1,t) + 'Y'+'O'
+    return f2
+
+def VictoriaDiganalX():
+    inicial = True
+    for r in range(3):
+        for c in range(3):
+            if r == c:
+                if inicial:
+                    f1 = P(r,c,2,1)
+                    inicial = False
+                else:
+                    f1 += P(r,c,2,1) 
+    f2 = f1 + P(r,c,1,t) + 'Y'+'O'
+    return f2
+             
+
+def unicidad():
+    inicial = True
+    for r in range(3):
+        for c in range(3):
+            for v in range(3):
+                #if inicial:
+                    #f1 = P(r,c,v,1)
+                    #inicial = False
+                #else:
+                    #f1 += P(r,c,v,1)
